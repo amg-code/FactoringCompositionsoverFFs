@@ -2,7 +2,7 @@
 
 This repository is licensed under the terms of the GNU General Public License v3.0 (GPL-3.0).
 
-In this repository you can find an implementation of the factorization algorithm induced by my new closed formula for the factorization of every composition of the form f(X^n) for arbitrary monic irreducible polynomials f over a finite field F_q and for arbitrary positive integers n satisfying gcd(n,q)=1 in SageMath/Python.  
+This is an implementation in SageMath/Python of the factorization algorithm induced by my new closed formula for the factorization of every composition of the form f(X^n) for arbitrary monic irreducible polynomials f over a finite field F_q and for arbitrary positive integers n satisfying gcd(n,q)=1.  
 
 The implementation makes use of the two new SageMath/Python classes RichFiniteField and RichPolynomial which are useful for working with univariate polynomials over different finite fields and their extensions.
 
