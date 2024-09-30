@@ -28,7 +28,7 @@ The resulting file __fXnAlgorithm.sage.py__ will appear in the current working d
 
 ## How to use the new factorization algorithm
 
-The new factorization algorithm is given in the file __fXnAlggorithm.sage__. This file can be preparsed and loaded as a Python module. The algorithm itself is called with the function
+The new factorization algorithm is given in the file __fXnAlgorithm.sage__. This file can be preparsed and loaded as a Python module. The algorithm itself is called with the function
 
 `factor_fXn(f, n, printing)`
 
