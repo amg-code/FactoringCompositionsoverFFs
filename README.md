@@ -35,13 +35,10 @@ where __f__ is a RichPolynomial instance, __n__ a positive integer and __printin
 
 The function can be used as follows:
 
-`from fXnAlgorithm import *
-
-q=2
-
-RFF=RichFiniteField(q,False,"X")
-
-f=RichPolynomial([1,1,1,0,1,0,1],RFF)`
+`   from fXnAlgorithm import *
+    q=2
+    RFF=RichFiniteField(q,False,"X")
+    f=RichPolynomial([1,1,1,0,1,0,1],RFF)`
 
 > 
 > n=2^3*7*3^3*11^2
