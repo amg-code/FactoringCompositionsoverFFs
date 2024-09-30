@@ -72,6 +72,12 @@ This class stores a polynomial over a given finite field (stored as a RichFinite
 It is enRICHed with many functions, some of which are redirections to existing SageMath-functions, many others are new implementations. 
 All functions are split into private functions doing the computations and storing the result in a class attribute and a public function returning this attribute. This has the big advantage that all computations are done exactly once and only if needed. 
 
+## Dependencies
+
+The package __sage.coding.relative_finite_field_extension__ is used for the RichExtensionField and the computation of the order and the k-normality of a RichPolynomial. This package is marked as experimental. When used for the first time, it raises the following warning:
+> FutureWarning: This class/method/function is marked as experimental. It, its functionality or its interface might change without a formal deprecation.
+ 
+However, at the moment (2023-10) it only makes use of the function `Hom(F,E)` for two finite fields F and E, which is part of the standard library of SageMath.
 
 
 #### Author
