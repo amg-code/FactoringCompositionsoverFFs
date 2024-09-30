@@ -7,7 +7,7 @@ This is an implementation in SageMath/Python of the factorization algorithm indu
 The implementation makes use of the two new SageMath/Python classes RichFiniteField and RichPolynomial which are useful for working with univariate polynomials over different finite fields and their extensions.
 
 ### Table of contents:
-- [How to preparse .sage files](https://github.com/amg-code/FactoringCompositionsoverFFs#how-to-preparse)
+- [How to preparse .sage files](https://github.com/amg-code/FactoringCompositionsoverFFs#how-to-preparse-sage-files)
 - [The new factorization algorithm](https://github.com/amg-code/FactoringCompositionsoverFFs#the-new-xn-factorization-algorithm)
 - [How rich are the two RichClasses?](https://github.com/amg-code/FactoringCompositionsoverFFs#how-rich-are-the-two-richclasses)
 
@@ -21,7 +21,17 @@ The resulting file __fXnAlgorithm.sage.py__ will appear in the current working d
 The new factorization algorithm is given in the file __fXnAlggorithm.sage__. This file can be preparsed and loaded as a Python module. The algorithm itself is called with the function
 > factor_fXn(f, n, printing)
 
-where __f__ is a RichPolynomial instance, __n__ a positive integer and __printing__ either True or False, depending on whether you wish to print all steps of the algorithm or not. 
+where __f__ is a RichPolynomial instance, __n__ a positive integer and __printing__ either _True_ or _False_, depending on whether you wish to print all steps of the algorithm or not. Note that printing makes the program much slower. 
+
+The function can be used as follows:
+> from fXnAlgorithm import *
+> q=2
+> RFF=RichFiniteField(q,False,"X")
+> f=RichPolynomial([1,1,1,0,1,0,1],RFF)
+> n=2^3*7*3^3*11^2
+>
+> print(factor_fXn(f,n,1) # with printing all algorithm steps
+> print(factor_fXn(f,n,0) # without printing all algorithm steps
 
 
 
