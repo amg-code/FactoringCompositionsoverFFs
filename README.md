@@ -12,6 +12,7 @@ The implementation makes use of the two new SageMath/Python classes  __RichFinit
 ### Table of contents:
 - [How to preparse .sage files](https://github.com/amg-code/FactoringCompositionsoverFFs#how-to-preparse-sage-files)
 - [How to use the new factorization algorithm](https://github.com/amg-code/FactoringCompositionsoverFFs#how-to-use-the-new-factorization-algorithm)
+- [Measuring the new factorization algorithm's computation time](https://github.com/amg-code/FactoringCompositionsoverFFs#measuring-the-new-factorization-algorithms-computation-time)
 - [How rich are the two RichClasses?](https://github.com/amg-code/FactoringCompositionsoverFFs#how-rich-are-the-two-richclasses)
 
 ## How to preparse .sage files
