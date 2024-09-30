@@ -11,7 +11,7 @@ The implementation makes use of the two new SageMath/Python classes  __RichFinit
 
 ### Table of contents:
 - [How to preparse .sage files](https://github.com/amg-code/FactoringCompositionsoverFFs#how-to-preparse-sage-files)
-- [The new factorization algorithm](https://github.com/amg-code/FactoringCompositionsoverFFs#the-new-xn-factorization-algorithm)
+- [How to use the new factorization algorithm](https://github.com/amg-code/FactoringCompositionsoverFFs#how-to-use-the-new-factorization-algorithm)
 - [How rich are the two RichClasses?](https://github.com/amg-code/FactoringCompositionsoverFFs#how-rich-are-the-two-richclasses)
 
 ## How to preparse .sage files
@@ -24,8 +24,7 @@ The resulting file __fXnAlgorithm.sage.py__ will appear in the current working d
 
 
 
-
-## The new factorization algorithm
+## How to use the new factorization algorithm
 
 The new factorization algorithm is given in the file __fXnAlggorithm.sage__. This file can be preparsed and loaded as a Python module. The algorithm itself is called with the function
 
@@ -36,6 +35,7 @@ where __f__ is a RichPolynomial instance, __n__ a positive integer and __printin
 The function can be used as follows:
 
     from fXnAlgorithm import * 
+    from UsefulFunctions import *      # for Magma-style printing
     
     q=2
     
@@ -49,7 +49,13 @@ The function can be used as follows:
     
     print(factor_fXn(f,n,0)     # without printing all algorithm steps 
 
-If you wish to measure the execution time of the new algorithm and/or compare it with the existing SageMath `factor()` function, you can use the file __TestNewAlgorithm.sage__. 
+    print_Magma_style(factor_fXn(f,n,0))    # print in the same style as Magma
+
+## Measuring the new factorization algorithm's computation time
+
+If you wish to measure the execution time of the new algorithm and/or compare it with the existing SageMath `factor()` function, you can use the file __TestNewAlgorithm.sage__.  Look for `USER INPUT` and specify the examples you wish to compute as tuples `(q,n,f)` (look for USER INPUT). 
+
+Note that the program supports parallel computations for multiple polynomials at the same time. For this the Python module __multiprocessing__ is used. However, the PARI implementation of SageMath's `factor()` function is not compatible with the Python module __signal__ which is used for the computation timeout. We recommend that you set the variable `parallel_computations` to `False` if you run into problems or out of RAM. 
 
 ## How rich are the two RichClasses?
 __RichFiniteField__ 
