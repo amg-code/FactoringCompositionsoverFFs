@@ -42,15 +42,12 @@ The function can be used as follows:
     RFF=RichFiniteField(q,False,"X")
     
     f=RichPolynomial([1,1,1,0,1,0,1],RFF)
-
-> 
-> n=2^3*7*3^3*11^2
->
-> 
-> print(factor_fXn(f,n,1) # with printing all algorithm steps
-> 
-> print(factor_fXn(f,n,0) # without printing all algorithm steps
-> 
+    
+    n=2^3*7*3^3*11^2
+    
+    print(factor_fXn(f,n,1)     # with printing all algorithm steps
+    
+    print(factor_fXn(f,n,0)     # without printing all algorithm steps 
 
 
 
