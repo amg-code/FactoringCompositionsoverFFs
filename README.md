@@ -17,7 +17,8 @@ The implementation makes use of the two new SageMath/Python classes  __RichFinit
 ## How to preparse .sage files
 
 Several .sage files in this repository have to be preparsed so that they can be loaded as Python modules into other .sage files. We include the preparsed versions of the files in this repository. However, if you wish to preparse the files yourself, please navigate to the folder that the file (i.e. fXnAlgorithm.sage) is in and use the following command:
-> sage --preparse fXnAlgorithm.sage
+
+`sage --preparse fXnAlgorithm.sage`
 
 The resulting file __fXnAlgorithm.sage.py__ will appear in the current working directory and can be renamed to __fXnAlgorithm.py__. 
 
