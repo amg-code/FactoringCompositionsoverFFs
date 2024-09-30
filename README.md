@@ -49,7 +49,7 @@ The function can be used as follows:
     
     print(factor_fXn(f,n,0)     # without printing all algorithm steps 
 
-
+If you wish to measure the execution time of the new algorithm and/or compare it with the existing SageMath `factor()` function, you can use the file __TestNewAlgorithm.sage__. 
 
 ## How rich are the two RichClasses?
 __RichFiniteField__ 
