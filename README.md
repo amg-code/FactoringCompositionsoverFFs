@@ -4,7 +4,7 @@ This repository is licensed under the terms of the GNU General Public License v3
 
 This is an implementation in SageMath/Python of the factorization algorithm induced by my new closed formula for the factorization of every composition of the form f(X^n) for arbitrary monic irreducible polynomials f over a finite field F_q and for arbitrary positive integers n satisfying gcd(n,q)=1.  
 
-The implementation makes use of the two new SageMath/Python classes RichFiniteField and RichPolynomial which are useful for working with univariate polynomials over different finite fields and their extensions.
+The implementation makes use of the two new SageMath/Python classes  __RichFiniteField__ and __RichPolynomial__  which are useful for working with univariate polynomials over different finite fields and their extensions. You can find a short tutorial on how to use the two classes in the file __RichTutorial.sage__. 
 
 ### Table of contents:
 - [How to preparse .sage files](https://github.com/amg-code/FactoringCompositionsoverFFs#how-to-preparse-sage-files)
@@ -18,8 +18,6 @@ Several .sage files in this repository have to be preparsed so that they can be 
 
 The resulting file __fXnAlgorithm.sage.py__ will appear in the current working directory and can be renamed to __fXnAlgorithm.py__. 
 
-## How to use the Rich classes
-You can find a short tutorial on how to use the classes __RichFiniteField__ and __RichPolynomial__ in the file __RichTutorial.sage__. 
 
 
 
