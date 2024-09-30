@@ -28,18 +28,16 @@ The resulting file __fXnAlgorithm.sage.py__ will appear in the current working d
 ## The new factorization algorithm
 
 The new factorization algorithm is given in the file __fXnAlggorithm.sage__. This file can be preparsed and loaded as a Python module. The algorithm itself is called with the function
-> factor_fXn(f, n, printing)
 
-where __f__ is a RichPolynomial instance, __n__ a positive integer and __printing__ either _True_ or _False_, depending on whether you wish to print all steps of the algorithm or not. Note that printing makes the program much slower. 
+`factor_fXn(f, n, printing)`
+
+where __f__ is a RichPolynomial instance, __n__ a positive integer and __printing__ either `True` or `False`, depending on whether you wish to print all steps of the algorithm or not. Note that printing makes the program much slower. 
 
 The function can be used as follows:
-> from fXnAlgorithm import *
-> 
-> q=2
-> 
-> RFF=RichFiniteField(q,False,"X")
-> 
-> f=RichPolynomial([1,1,1,0,1,0,1],RFF)
+`from fXnAlgorithm import *
+q=2
+RFF=RichFiniteField(q,False,"X")
+f=RichPolynomial([1,1,1,0,1,0,1],RFF)`
 > 
 > n=2^3*7*3^3*11^2
 >
