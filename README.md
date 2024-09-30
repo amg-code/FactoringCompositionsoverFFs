@@ -11,13 +11,20 @@ The implementation makes use of the two new SageMath/Python classes RichFiniteFi
 - [The new factorization algorithm](https://github.com/amg-code/FactoringCompositionsoverFFs#the-new-xn-factorization-algorithm)
 - [How rich are the two RichClasses?](https://github.com/amg-code/FactoringCompositionsoverFFs#how-rich-are-the-two-richclasses)
 
-## How to preparse .sage files:
+## How to preparse .sage files
+
 Several .sage files in this repository have to be preparsed so that they can be loaded as Python modules into other .sage files. We include the preparsed versions of the files in this repository. However, if you wish to preparse the files yourself, please navigate to the folder that the file (i.e. fXnAlgorithm.sage) is in and use the following command:
 > sage --preparse fXnAlgorithm.sage
 
 The resulting file __fXnAlgorithm.sage.py__ will appear in the current working directory and can be renamed to __fXnAlgorithm.py__. 
 
+## How to use the Rich classes
+You can find a short tutorial on how to use the classes __RichFiniteField__ and __RichPolynomial__ in the file __RichTutorial.sage__. 
+
+
+
 ## The new factorization algorithm
+
 The new factorization algorithm is given in the file __fXnAlggorithm.sage__. This file can be preparsed and loaded as a Python module. The algorithm itself is called with the function
 > factor_fXn(f, n, printing)
 
