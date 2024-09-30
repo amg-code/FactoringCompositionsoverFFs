@@ -7,18 +7,20 @@ This is an implementation in SageMath/Python of the factorization algorithm indu
 The implementation makes use of the two new SageMath/Python classes RichFiniteField and RichPolynomial which are useful for working with univariate polynomials over different finite fields and their extensions.
 
 ### Table of contents:
+- [How to preparse .sage files](https://github.com/amg-code/FactoringCompositionsoverFFs#how-to-preparse)
 - [The new factorization algorithm](https://github.com/amg-code/FactoringCompositionsoverFFs#the-new-xn-factorization-algorithm)
 - [How rich are the two RichClasses?](https://github.com/amg-code/FactoringCompositionsoverFFs#how-rich-are-the-two-richclasses)
-- [Author](https://github.com/amg-code/FactoringCompositionsoverFFs#author)
 
-## How to preparse:
+## How to preparse .sage files:
 Several .sage files in this repository have to be preparsed so that they can be loaded as Python modules into other .sage files. We include the preparsed versions of the files in this repository. However, if you wish to preparse the files yourself, please navigate to the folder that the file (i.e. fXnAlgorithm.sage) is in and use the following command:
 > sage --preparse fXnAlgorithm.sage
+
 The resulting file __fXnAlgorithm.sage.py__ will appear in the current working directory and can be renamed to __fXnAlgorithm.py__. 
 
 ## The new factorization algorithm
 The new factorization algorithm is given in the file __fXnAlggorithm.sage__. This file can be preparsed and loaded as a Python module. The algorithm itself is called with the function
 > factor_fXn(f, n, printing)
+
 where __f__ is a RichPolynomial instance, __n__ a positive integer and __printing__ either True or False, depending on whether you wish to print all steps of the algorithm or not. 
 
 
