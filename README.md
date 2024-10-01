@@ -59,7 +59,7 @@ If you wish to measure the execution time of the new algorithm and/or compare it
 
 The computation times will be written to a .csv file (with "\t" as separator) in the filepath `filepath` with the filename _NewfXnAlg_measurements__ + `fileID`. Additionally, you need to specify how long the program shall wait for a result (`timeout` seconds) and whether you wish to compare the computation time with the existing SageMath function (Set `comparison` to either _True_ or _False_). 
 
-Note that the program supports parallel computations for multiple polynomials at the same time. For this the Python module __multiprocessing__ is used. However, the PARI implementation of SageMath's `factor()` function is not compatible with the Python module __signal__ which is used for the computation timeout. We recommend that you set the variable `parallel_computations` to `False` if you run into problems or out of RAM. 
+Note that the program supports parallel computations for multiple polynomials at the same time. For this the Python module __multiprocessing__ is used. However, the PARI implementation of SageMath's `factor()` function is not compatible with the Python module __signal__ which is used for the computation timeout. We recommend that you set the variable `parallel_computations` to _False_ if you run into problems or out of RAM. 
 
 ## How rich are the two RichClasses?
 __RichFiniteField__ 
