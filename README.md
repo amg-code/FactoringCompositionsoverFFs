@@ -59,7 +59,14 @@ If you wish to measure the execution time of the new algorithm and/or compare it
 
 The computation times will be written to a .csv file (with "\t" as separator) in the filepath `filepath` with the filename _NewfXnAlg_measurements__ + `fileID`. Additionally, you need to specify how long the program shall wait for a result (`timeout` seconds) and whether you wish to compare the computation time with the existing SageMath function (Set `comparison` to either _True_ or _False_). 
 
-Note that the program supports parallel computations for multiple polynomials at the same time. For this the Python module __multiprocessing__ is used. However, the PARI implementation of SageMath's `factor()` function is not compatible with the Python module __signal__ which is used for the computation timeout. We recommend that you set the variable `parallel_computations` to _False_ if you run into problems or out of RAM. 
+Note that the program supports parallel computations for multiple polynomials at the same time. For this the Python module __multiprocessing__ is used. However, the PARI implementation of SageMath's `factor()` function is not compatible with the Python module __signal__ which is used for the computation timeout. We recommend that you set the variable `parallel_computations` to _False_ if you run our of RAM or into problems (the program seems to run endlessly). 
+
+When the positive integer __n__ is large, then SageMath's `factor()` function needs a lot of RAM and/or seems to run endlessly (probably because it is not able to compute the composition f(X^n) itself). Since our algorithm needs almost no RAM, we obtain factorizations for positive integers that could not be computed with SageMath's `factor`. For example, on a server with 384 GB of RAM we measured the following computation times for the monic irreducible polynomial f=X^6+X^5+X^4+X^2+1 over F_2:
+
+| | n | s | SageMath | NewAlg | ratio| 
+| 1 | 182 952 = 2^3*3^3*7*11^2 | 5 | 77.727 s| 0.727 s | 107 : 1|
+| 2 | 361 = 19^2 | 3 | 0.020 s | 0.232 s | 0 : 1 | 
+| 3 | 
 
 ## How rich are the two RichClasses?
 __RichFiniteField__ 
