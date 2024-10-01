@@ -3,7 +3,7 @@
 This repository is licensed under the terms of the GNU General Public License v3.0 (GPL-3.0).
 
 I present a SageMath/Python implementation of the factorization algorithm induced by the new closed formula for 
-the factorization of every composition of the form $f(X^n)$ over a finite field $ \mathbb{F}_q $ for arbitrary monic irreducible polynomials $f$ and for arbitrary positive integers $n$ satisfying $\gcd(n,q)=1$ as presented in my ArXiV preprint 
+the factorization of every composition of the form $f(X^n)$ over a finite field $ F_q $ for arbitrary monic irreducible polynomials $f$ and for arbitrary positive integers $n$ satisfying $\gcd(n,q)=1$ as presented in my ArXiV preprint 
 
 __"Closed formulas for the factorization of X^n−1, the n-th cyclotomic polynomial, X^n−a and f(X^n) over a finite field for arbitrary positive integers n", Anna-Maurin Graner__ [https://arxiv.org/abs/2306.11183]. 
 
@@ -61,14 +61,17 @@ The computation times will be written to a .csv file (with "\t" as separator) in
 
 Note that the program supports parallel computations for multiple polynomials at the same time. For this the Python module __multiprocessing__ is used. However, the PARI implementation of SageMath's `factor()` function is not compatible with the Python module __signal__ which is used for the computation timeout. We recommend that you set the variable `parallel_computations` to _False_ if you run our of RAM or into problems (the program seems to run endlessly). 
 
-When the positive integer __n__ is large, then SageMath's `factor()` function needs a lot of RAM and/or seems to run endlessly (probably because it is not able to compute the composition $f(X^n)$ itself). Since our algorithm needs almost no RAM, we obtain factorizations for positive integers that could not be computed with SageMath's `factor`. For example, on a server with 384 GB of RAM we measured the following computation times for the monic irreducible polynomial $f=X^6+X^5+X^4+X^2+1$ over $\mathbb{F}_2$:
+When the positive integer __n__ is large, then SageMath's `factor()` function needs a lot of RAM and/or seems to run endlessly (probably because it is not able to compute the composition $f(X^n)$ itself). Since our algorithm needs almost no RAM, we obtain factorizations for positive integers that could not be computed with SageMath's `factor`. For example, on a server with 384 GB of RAM we measured the following computation times for the monic irreducible polynomial $f=X^6+X^5+X^4+X^2+1$ over $F_2$:
 
 | | n | s | SageMath | NewAlg | ratio| 
 |--- | --- | --- | --- | --- | --- |
 | 1 | $182 952 = 2^3 * 3^3 * 7 * 11^2$ | 5 | 77.727 s| 0.727 s | 107 : 1|
 | 2 | $361 = 19^2$ | 3 | 0.020 s | 0.232 s | 1 : 11 | 
 | 3 | $6 859 = 19^3$ | 3 | 5.038 s | 0.292 s | 17:1 | 
-| 4 | $130 321 = 19^4$ | 3 | $\infty s$ | 0.376 s | $\infty$ : 1|  
+| 4 | $130 321 = 19^4$ | 3 | $\infty $ s | 0.376 s | $\infty$ : 1|  
+| 5 | $ 2 476 099 = 19^5$ | 3 | stackoverflow | 0.530 s | $ \infty$ :1 |
+| 6 | $47 045 881 = 19^6$ | 3 | $\infty$ s | 1.764 s | $\infty$ : 1| 
+
 
 ## How rich are the two RichClasses?
 __RichFiniteField__ 
