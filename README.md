@@ -68,9 +68,9 @@ When the positive integer __n__ is large, then SageMath's `factor()` function ne
 | 1 | $182 952 = 2^3 \cdot 3^3 \cdot 7 \cdot 11^2$ | 5 | 77.727 s| 0.727 s | 107 : 1|
 | 2 | $361 = 19^2$ | 3 | 0.020 s | 0.232 s | 1 : 11 | 
 | 3 | $6 859 = 19^3$ | 3 | 5.038 s | 0.292 s | 17:1 | 
-| 4 | $130 321 = 19^4$ | 3 | $\infty$ s | 0.376 s | $\infty$ : 1|  
-| 5 | $2 476 099 = 19^5$ | 3 | `stackoverflow` | 0.530 s | $\infty$ :1 |
-| 6 | $47 045 881 = 19^6$ | 3 | $\infty$ s | 1.764 s | $\infty$ : 1| 
+| 4 | $130 321 = 19^4$ | 3 | > 600 s | 0.376 s | $\infty$ : 1|  
+| 5 | $2 476 099 = 19^5$ | 3 | `stackoverflow` | 0.530 s | $\infty$ : 1 |
+| 6 | $47 045 881 = 19^6$ | 3 | > 600 s | 1.764 s | $\infty$ : 1| 
 
 
 ## How rich are the two RichClasses?
