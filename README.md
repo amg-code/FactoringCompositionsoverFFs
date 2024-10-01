@@ -55,7 +55,9 @@ The function can be used as follows:
 
 ## Measuring the new factorization algorithm's computation time
 
-If you wish to measure the execution time of the new algorithm and/or compare it with the existing SageMath `factor()` function, you can use the file __TestNewAlgorithm.sage__.  Look for `USER INPUT` and specify the examples you wish to compute as tuples `(q,n,f)`. The computation times will be written to a .csv file (with "\t" as separator) in the filepath `filepath` with the filename __NewfXnAlg_measurements___ + `fileID`. Additionally, you need to specify how long the program shall wait for a result (`timeout` seconds) and whether you wish to compare the computation time with the existing SageMath function (Set `comparison` to either _True_ or _False_). 
+If you wish to measure the execution time of the new algorithm and/or compare it with the existing SageMath `factor()` function, you can use the file __TestNewAlgorithm.sage__.  Look for `USER INPUT` and specify the examples you wish to compute as tuples `(q,n,f)`. 
+
+The computation times will be written to a .csv file (with "\t" as separator) in the filepath `filepath` with the filename __NewfXnAlg_measurements___ + `fileID`. Additionally, you need to specify how long the program shall wait for a result (`timeout` seconds) and whether you wish to compare the computation time with the existing SageMath function (Set `comparison` to either _True_ or _False_). 
 
 Note that the program supports parallel computations for multiple polynomials at the same time. For this the Python module __multiprocessing__ is used. However, the PARI implementation of SageMath's `factor()` function is not compatible with the Python module __signal__ which is used for the computation timeout. We recommend that you set the variable `parallel_computations` to `False` if you run into problems or out of RAM. 
 
