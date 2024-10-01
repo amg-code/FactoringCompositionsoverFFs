@@ -64,6 +64,7 @@ Note that the program supports parallel computations for multiple polynomials at
 When the positive integer __n__ is large, then SageMath's `factor()` function needs a lot of RAM and/or seems to run endlessly (probably because it is not able to compute the composition f(X^n) itself). Since our algorithm needs almost no RAM, we obtain factorizations for positive integers that could not be computed with SageMath's `factor`. For example, on a server with 384 GB of RAM we measured the following computation times for the monic irreducible polynomial f=X^6+X^5+X^4+X^2+1 over F_2:
 
 | | n | s | SageMath | NewAlg | ratio| 
+|--- | --- | --- | --- | --- | --- |
 | 1 | 182 952 = 2^3*3^3*7*11^2 | 5 | 77.727 s| 0.727 s | 107 : 1|
 | 2 | 361 = 19^2 | 3 | 0.020 s | 0.232 s | 0 : 1 | 
 | 3 | 
