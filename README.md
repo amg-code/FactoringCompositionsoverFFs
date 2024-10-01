@@ -61,13 +61,14 @@ The computation times will be written to a .csv file (with "\t" as separator) in
 
 Note that the program supports parallel computations for multiple polynomials at the same time. For this the Python module __multiprocessing__ is used. However, the PARI implementation of SageMath's `factor()` function is not compatible with the Python module __signal__ which is used for the computation timeout. We recommend that you set the variable `parallel_computations` to _False_ if you run our of RAM or into problems (the program seems to run endlessly). 
 
-When the positive integer __n__ is large, then SageMath's `factor()` function needs a lot of RAM and/or seems to run endlessly (probably because it is not able to compute the composition f(X^n) itself). Since our algorithm needs almost no RAM, we obtain factorizations for positive integers that could not be computed with SageMath's `factor`. For example, on a server with 384 GB of RAM we measured the following computation times for the monic irreducible polynomial f=X^6+X^5+X^4+X^2+1 over F_2:
+When the positive integer __n__ is large, then SageMath's `factor()` function needs a lot of RAM and/or seems to run endlessly (probably because it is not able to compute the composition f(X^n) itself). Since our algorithm needs almost no RAM, we obtain factorizations for positive integers that could not be computed with SageMath's `factor`. For example, on a server with 384 GB of RAM we measured the following computation times for the monic irreducible polynomial $f=X^6+X^5+X^4+X^2+1$ over $F_2$:
 
 | | n | s | SageMath | NewAlg | ratio| 
 |--- | --- | --- | --- | --- | --- |
-| 1 | 182 952 = 2^3*3^3*7*11^2 | 5 | 77.727 s| 0.727 s | 107 : 1|
-| 2 | 361 = 19^2 | 3 | 0.020 s | 0.232 s | 0 : 1 | 
-| 3 | 
+| 1 | 182 952 = 2^3 * 3^3 * 7 * 11^2 | 5 | 77.727 s| 0.727 s | 107 : 1|
+| 2 | 361 = 19^2 | 3 | 0.020 s | 0.232 s | 1 : 11 | 
+| 3 | 6 859 = 19^3 | 3 | 5.038 s | 0.292 s | 17:1 | 
+| 4 | 130 321 = 19^4 | 3 | $\infty s$ | 0.376 s | $\infty$ : 1|  
 
 ## How rich are the two RichClasses?
 __RichFiniteField__ 
