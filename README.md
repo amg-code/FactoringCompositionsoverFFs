@@ -3,7 +3,7 @@
 This repository is licensed under the terms of the GNU General Public License v3.0 (GPL-3.0).
 
 I present a SageMath/Python implementation of the factorization algorithm induced by the new closed formula for 
-the factorization of every composition of the form $f(X^n)$ over a finite field $ F_q $ for arbitrary monic irreducible polynomials $f$ and for arbitrary positive integers $n$ satisfying $\gcd(n,q)=1$ as presented in my ArXiV preprint 
+the factorization of every composition of the form $f(X^n)$ over a finite field $F_q$ for arbitrary monic irreducible polynomials $f$ and for arbitrary positive integers $n$ satisfying $\gcd(n,q)=1$ as presented in my ArXiV preprint 
 
 __"Closed formulas for the factorization of X^n−1, the n-th cyclotomic polynomial, X^n−a and f(X^n) over a finite field for arbitrary positive integers n", Anna-Maurin Graner__ [https://arxiv.org/abs/2306.11183]. 
 
